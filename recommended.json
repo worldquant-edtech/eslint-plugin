@@ -1,0 +1,13 @@
+{
+  "env": {
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "semi": "error",
+    "no-console": "error",
+    "no-unused-vars": ["error", { "ignoreRestSiblings": true }]
+  }
+}

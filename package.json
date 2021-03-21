@@ -1,9 +1,14 @@
 {
-  "name": "@bedrockio/eslint-plugin-bedrock",
+  "name": "@bedrockio/eslint-plugin",
   "version": "1.0.0",
-  "description": "Common ESLint config for Bedrock projects and plugins.",
-  "repository": "bedrockio/eslint-config",
+  "description": "Common ESLint plugin for Bedrock projects.",
   "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "main": "index.js",
   "peerDependencies": {
     "eslint": ">=7"
   }
