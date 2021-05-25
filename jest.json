@@ -8,6 +8,7 @@
       {
         "assertFunctionNames": ["expect*", "assert*"]
       }
-    ]
+    ],
+    "jest/no-disabled-tests": [ "off" ]
   }
 }

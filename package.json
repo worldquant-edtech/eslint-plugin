@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-bedrock",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Common ESLint plugin for Bedrock projects.",
   "license": "MIT",
   "keywords": [
