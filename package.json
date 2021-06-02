@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-bedrock",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Common ESLint plugin for Bedrock projects.",
   "license": "MIT",
   "keywords": [
@@ -12,7 +12,7 @@
   "peerDependencies": {
     "eslint": ">=7"
   },
-  "devDependencies": {
+  "dependencies": {
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-react": "^7.24.0"
   }
