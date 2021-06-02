@@ -9,6 +9,7 @@
         "assertFunctionNames": ["expect*", "assert*"]
       }
     ],
-    "jest/no-disabled-tests": [ "off" ]
+    "jest/no-focused-tests": "off",
+    "jest/no-disabled-tests": "off"
   }
 }
