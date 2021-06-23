@@ -8,7 +8,6 @@
   "rules": {
     "semi": "error",
     "no-console": "warn",
-    "func-style": ["error", "declaration"],
     "no-unused-vars": ["warn", { "ignoreRestSiblings": true }]
   }
 }
