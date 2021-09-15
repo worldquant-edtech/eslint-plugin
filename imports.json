@@ -12,6 +12,7 @@
           "internal",
           "sibling"
         ],
+        "newlines-between": "always-and-inside-groups",
         "pathGroups": [
           {
             "pattern": "semantic",
