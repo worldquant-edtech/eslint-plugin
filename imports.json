@@ -1,0 +1,27 @@
+{
+  "extends": ["plugin:import/recommended"],
+  "rules": {
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "index",
+          "internal",
+          "sibling"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "semantic",
+            "group": "external"
+          }
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
