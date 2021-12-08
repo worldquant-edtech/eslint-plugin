@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-bedrock",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Common ESLint plugin for Bedrock projects.",
   "license": "MIT",
   "keywords": [
@@ -10,12 +10,12 @@
   ],
   "main": "index.js",
   "peerDependencies": {
-    "eslint": ">=7"
+    "eslint": ">=8"
   },
   "dependencies": {
-    "eslint-import-resolver-webpack": "^0.13.1",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-react": "^7.27.1"
   }
 }
