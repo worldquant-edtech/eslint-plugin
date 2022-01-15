@@ -10,6 +10,7 @@
       }
     ],
     "jest/no-focused-tests": "off",
-    "jest/no-disabled-tests": "off"
+    "jest/no-disabled-tests": "off",
+    "jest/no-conditional-expect": "off"
   }
 }
