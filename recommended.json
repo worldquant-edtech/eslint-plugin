@@ -8,6 +8,7 @@
   "rules": {
     "semi": "error",
     "no-console": "warn",
+    "curly": ["error", "all"],
     "no-unused-vars": ["warn", { "ignoreRestSiblings": true }]
   }
 }
