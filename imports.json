@@ -1,23 +1,49 @@
 {
   "extends": ["plugin:import/recommended"],
   "rules": {
+    "import/no-unresolved": ["warn"],
     "import/order": [
       "warn",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "parent",
-          "index",
-          "internal",
-          "sibling"
-        ],
         "newlines-between": "always-and-inside-groups",
         "pathGroups": [
           {
             "pattern": "semantic",
             "group": "external"
+          },
+          {
+            "pattern": "components",
+            "group": "internal"
+          },
+          {
+            "pattern": "components/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "utils",
+            "group": "internal"
+          },
+          {
+            "pattern": "utils/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "helpers",
+            "group": "internal"
+          },
+          {
+            "pattern": "helpers/**",
+            "group": "internal"
           }
+        ],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "index",
+          "object",
+          "type"
         ]
       }
     ]
