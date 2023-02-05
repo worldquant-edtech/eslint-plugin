@@ -1,7 +1,7 @@
 {
   "extends": ["plugin:import/recommended"],
   "rules": {
-    "import/no-unresolved": ["warn"],
+    "import/no-unresolved": "warn",
     "import/order": [
       "warn",
       {
