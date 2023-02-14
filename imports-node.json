@@ -2,6 +2,7 @@
   "extends": ["plugin:import/recommended"],
   "rules": {
     "import/no-unresolved": "warn",
+    "import/no-named-as-default-member": "off",
     "import/order": [
       "warn",
       {

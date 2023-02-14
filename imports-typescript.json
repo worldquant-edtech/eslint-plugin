@@ -1,8 +1,9 @@
 {
   "extends": ["plugin:import/recommended", "plugin:import/typescript"],
   "rules": {
-    "import/no-unresolved": "warn",
     "prefer-const": "off",
+    "import/no-unresolved": "warn",
+    "import/no-named-as-default-member": "off",
     "import/order": [
       "warn",
       {
