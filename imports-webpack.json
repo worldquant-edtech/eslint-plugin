@@ -13,32 +13,37 @@
             "group": "external"
           },
           {
-            "pattern": "components",
+            "pattern": "+(stores|helpers|layouts)",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "+(stores|helpers|layouts)/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "+(screens|modals|components)",
             "group": "internal"
           },
           {
-            "pattern": "components/**",
+            "pattern": "+(screens|modals|components)/**",
             "group": "internal"
           },
           {
             "pattern": "utils",
-            "group": "internal"
+            "group": "internal",
+            "position": "after"
           },
           {
             "pattern": "utils/**",
-            "group": "internal"
-          },
-          {
-            "pattern": "helpers",
-            "group": "internal"
-          },
-          {
-            "pattern": "helpers/**",
-            "group": "internal"
+            "group": "internal",
+            "position": "after"
           }
         ],
         "groups": [
           "builtin",
+          "unknown",
           "external",
           "internal",
           ["parent", "sibling"],
