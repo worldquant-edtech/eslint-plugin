@@ -4,6 +4,7 @@ const { parserOptions, ...rest } = plugin.configs.recommended;
 
 export default {
   ...rest,
+  files: ['**/*.{js,jsx}'],
   plugins: {
     import: plugin,
   },

@@ -1,23 +1,24 @@
-import plugin from 'eslint-plugin-react';
+import react from 'eslint-plugin-react';
+import globals from 'globals';
+import js from '@eslint/js';
 
-const { parserOptions, ...rest } = plugin.configs.recommended;
+// This branch is on hold until both these are resolved:
+// https://github.com/jsx-eslint/eslint-plugin-react/issues/3699
+// https://github.com/eslint/eslint/issues/18437
 
 export default {
-  ...rest,
   plugins: {
-    react: plugin,
+    react,
   },
   languageOptions: {
-    parserOptions,
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
+    },
   },
   rules: {
-    'react/prop-types': 'off',
-    'react/display-name': 'off',
-    'react/jsx-no-target-blank': 'off',
-    'react/no-unescaped-entities': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-uses-react': 'off',
-    'react/jsx-key': 'warn',
+    ...react.configs.recommended.rules,
   },
   settings: {
     react: {

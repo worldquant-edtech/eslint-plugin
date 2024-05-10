@@ -4,6 +4,7 @@ const { parserOptions, ...rest } = plugin.configs.recommended;
 
 export default {
   ...rest,
+  files: ['**/*.{ts,tsx}'],
   plugins: {
     import: plugin,
   },

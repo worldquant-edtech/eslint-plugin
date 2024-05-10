@@ -1,9 +1,6 @@
 import plugin from 'eslint-plugin-import';
 
-const { parserOptions, ...rest } = plugin.configs.recommended;
-
 export default {
-  ...rest,
   plugins: {
     import: plugin,
   },

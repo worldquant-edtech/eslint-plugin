@@ -1,13 +1,9 @@
 import plugin from 'eslint-plugin-jest';
 import globals from 'globals';
 
-const { env, ...rest } = plugin.configs.recommended;
-
 export default {
-  ...rest,
-  plugins: {
-    jest: plugin,
-  },
+  ...plugin.configs['flat/recommended'],
+  files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   languageOptions: {
     globals: {
       ...globals.jest,
