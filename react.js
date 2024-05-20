@@ -1,14 +1,14 @@
 import react from 'eslint-plugin-react';
 import globals from 'globals';
-import js from '@eslint/js';
 
-// This branch is on hold until both these are resolved:
+// This dependency can be removed when this lands:
 // https://github.com/jsx-eslint/eslint-plugin-react/issues/3699
-// https://github.com/eslint/eslint/issues/18437
+import { fixupPluginRules } from '@eslint/compat';
 
 export default {
+  files: ['**/*.{js,jsx}'],
   plugins: {
-    react,
+    react: fixupPluginRules(react),
   },
   languageOptions: {
     parserOptions: {
@@ -16,9 +16,13 @@ export default {
         jsx: true,
       },
     },
+    globals: {
+      ...globals.browser,
+    },
   },
   rules: {
-    ...react.configs.recommended.rules,
+    ...react.configs['recommended'].rules,
+    ...react.configs['jsx-runtime'].rules,
   },
   settings: {
     react: {

@@ -1,6 +1,7 @@
 import plugin from 'eslint-plugin-import';
 
 export default {
+  files: ['**/*.{js,jsx}'],
   plugins: {
     import: plugin,
   },
