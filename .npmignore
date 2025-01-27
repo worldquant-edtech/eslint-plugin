@@ -1,0 +1,5 @@
+.vscode
+babel.config.*
+jest.config.*
+scripts
+test
