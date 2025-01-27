@@ -1,14 +1,16 @@
-import mdx from 'eslint-plugin-mdx';
+import * as mdx from 'eslint-plugin-mdx';
 
 const plugin = {
   ...mdx.flat,
+  files: ['**/*.mdx'],
   processor: mdx.createRemarkProcessor({
     lintCodeBlocks: true,
   }),
   rules: {
     ...mdx.flat.rules,
-    semi: 0,
-    'no-undef': 0,
+    semi: 'off',
+    'no-undef': 'off',
+    'no-unused-expressions': 'off',
   },
 };
 

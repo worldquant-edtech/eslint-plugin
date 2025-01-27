@@ -1,4 +1,4 @@
-import plugin from 'eslint-plugin-import';
+import * as plugin from 'eslint-plugin-import';
 
 const { parserOptions, ...rest } = plugin.configs.recommended;
 
@@ -9,7 +9,15 @@ export default {
     import: plugin,
   },
   rules: {
-    'import/no-unresolved': 'warn',
+    'import/no-unresolved': [
+      'warn',
+      {
+        // package.json "style" may be used here which
+        // will resolve for webpack but not within the
+        // eslint plugin
+        ignore: ['\\.css$'],
+      },
+    ],
     'import/no-named-as-default-member': 'off',
     'import/order': [
       'warn',
@@ -48,6 +56,16 @@ export default {
             group: 'internal',
             position: 'after',
           },
+          {
+            pattern: 'assets',
+            group: 'sibling',
+            position: 'after',
+          },
+          {
+            pattern: 'assets/**',
+            group: 'sibling',
+            position: 'after',
+          },
         ],
         groups: [
           'builtin',
@@ -63,6 +81,13 @@ export default {
     ],
   },
   settings: {
-    'import/resolver': 'webpack',
+    'import/resolver': {
+      webpack: {
+        config: 'webpack.config.js',
+      },
+      node: {
+        extensions: ['.mjs', '.js', '.jsx', '.json'],
+      },
+    },
   },
 };

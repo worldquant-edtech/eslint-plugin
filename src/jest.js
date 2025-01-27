@@ -1,13 +1,17 @@
 import plugin from 'eslint-plugin-jest';
-import globals from 'globals';
 
 export default {
   ...plugin.configs['flat/recommended'],
-  files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+
+  files: ['**/*.{js,jsx,ts,tsx}'],
+  files: [
+    '**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '**/__mocks__/**/*.{js,jsx,ts,tsx}',
+    '**/*.test.js',
+    '**/*.spec.js',
+  ],
   languageOptions: {
-    globals: {
-      ...globals.jest,
-    },
+    globals: plugin.environments.globals.globals,
   },
   rules: {
     'jest/expect-expect': [

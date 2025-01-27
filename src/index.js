@@ -6,14 +6,12 @@ import { default as nodeImports } from './node-imports.js';
 import { default as webpackImports } from './webpack-imports.js';
 import { default as typescriptImports } from './typescript-imports.js';
 
-export default {
-  configs: {
-    mdx,
-    jest,
-    react,
-    recommended,
-    nodeImports,
-    webpackImports,
-    typescriptImports,
-  },
+export {
+  mdx,
+  jest,
+  react,
+  recommended,
+  nodeImports,
+  webpackImports,
+  typescriptImports,
 };

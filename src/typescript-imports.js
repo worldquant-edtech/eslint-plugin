@@ -1,4 +1,4 @@
-import plugin from 'eslint-plugin-import';
+import * as plugin from 'eslint-plugin-import';
 
 const { parserOptions, ...rest } = plugin.configs.recommended;
 
