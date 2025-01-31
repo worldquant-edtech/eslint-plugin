@@ -1,7 +1,8 @@
-import plugin from 'eslint-plugin-import';
+import * as plugin from 'eslint-plugin-import';
 
 export default {
   files: ['**/*.{js,jsx}'],
+  ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
   plugins: {
     import: plugin,
   },
@@ -33,5 +34,12 @@ export default {
         ],
       },
     ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src'],
+      },
+    },
   },
 };

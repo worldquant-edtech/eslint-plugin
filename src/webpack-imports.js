@@ -1,14 +1,15 @@
 import * as plugin from 'eslint-plugin-import';
 
-const { parserOptions, ...rest } = plugin.configs.recommended;
-
 export default {
-  ...rest,
-  files: ['**/*.{js,jsx}'],
-  plugins: {
-    import: plugin,
+  ...plugin.flatConfigs.recommended,
+  files: ['**/*.{js,jsx,ts,tsx}'],
+  ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   rules: {
+    ...plugin.flatConfigs.recommended.rules,
     'import/no-unresolved': [
       'warn',
       {
@@ -83,10 +84,10 @@ export default {
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'webpack.config.js',
+        config: './webpack.config.js',
       },
       node: {
-        extensions: ['.mjs', '.js', '.jsx', '.json'],
+        moduleDirectory: ['node_modules', 'src'],
       },
     },
   },
