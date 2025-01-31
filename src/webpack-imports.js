@@ -30,40 +30,23 @@ export default {
             group: 'external',
           },
           {
-            pattern: '+(stores|helpers|layouts)',
+            pattern:
+              '+(stores|helpers|layouts|@stores|@helpers|@layouts){,/**}',
             group: 'internal',
             position: 'before',
           },
           {
-            pattern: '+(stores|helpers|layouts)/**',
-            group: 'internal',
-            position: 'before',
-          },
-          {
-            pattern: '+(screens|modals|components)',
+            pattern:
+              '+(screens|modals|components|@screens|@modals|@components){,/**}',
             group: 'internal',
           },
           {
-            pattern: '+(screens|modals|components)/**',
-            group: 'internal',
-          },
-          {
-            pattern: 'utils',
+            pattern: '+(utils|@utils){,/**}',
             group: 'internal',
             position: 'after',
           },
           {
-            pattern: 'utils/**',
-            group: 'internal',
-            position: 'after',
-          },
-          {
-            pattern: 'assets',
-            group: 'sibling',
-            position: 'after',
-          },
-          {
-            pattern: 'assets/**',
+            pattern: '+(assets|@assets){,**}',
             group: 'sibling',
             position: 'after',
           },
