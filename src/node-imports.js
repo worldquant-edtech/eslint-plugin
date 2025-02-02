@@ -1,10 +1,12 @@
 import * as plugin from 'eslint-plugin-import';
 
 export default {
+  ...plugin.flatConfigs.recommended,
   files: ['**/*.{js,jsx}'],
   ignores: ['node_modules/**/*', 'dist/**/*', '**/*.d.ts'],
-  plugins: {
-    import: plugin,
+  languageOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   rules: {
     'import/no-unresolved': 'warn',
@@ -15,16 +17,30 @@ export default {
         'newlines-between': 'always-and-inside-groups',
         pathGroups: [
           {
-            pattern: 'utils',
+            pattern:
+              '+(stores|helpers|layouts|@stores|@helpers|@layouts){,/**}',
+            group: 'internal',
+            position: 'before',
+          },
+          {
+            pattern:
+              '+(screens|modals|components|@screens|@modals|@components){,/**}',
             group: 'internal',
           },
           {
-            pattern: 'utils/**',
+            pattern: '+(utils|@utils){,/**}',
             group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '+(assets|@assets){,**}',
+            group: 'sibling',
+            position: 'after',
           },
         ],
         groups: [
           'builtin',
+          'unknown',
           'external',
           'internal',
           ['parent', 'sibling'],
@@ -37,6 +53,7 @@ export default {
   },
   settings: {
     'import/resolver': {
+      exports: true,
       node: {
         moduleDirectory: ['node_modules', 'src'],
       },
