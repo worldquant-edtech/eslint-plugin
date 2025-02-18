@@ -5,7 +5,7 @@ export default {
 
   files: ['**/*.{js,jsx,ts,tsx}'],
   files: [
-    'test/**/*.{js,jsx,ts,tsx}',
+    '**/test*/**/*.{js,jsx,ts,tsx}',
     '**/__tests__/**/*.{js,jsx,ts,tsx}',
     '**/__mocks__/**/*.{js,jsx,ts,tsx}',
     '**/*.test.js',
