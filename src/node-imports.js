@@ -55,7 +55,7 @@ export default {
     'import/resolver': {
       exports: true,
       node: {
-        moduleDirectory: ['node_modules', 'src'],
+        modules: ['node_modules', 'src'],
       },
     },
   },
