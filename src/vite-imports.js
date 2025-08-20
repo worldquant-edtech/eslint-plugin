@@ -1,5 +1,12 @@
+import path from 'path';
 import * as plugin from 'eslint-plugin-import';
 import importRules from './importRules.js';
+
+// const bar = path.join(process.cwd(), './vite.config.js');
+// console.info('huh', bar);
+const foo = await import(
+  '/Users/andrew/Bedrock/core/services/web/vite.config.js'
+);
 
 export default {
   ...plugin.flatConfigs.recommended,
@@ -12,20 +19,11 @@ export default {
   rules: {
     ...plugin.flatConfigs.recommended.rules,
     ...importRules,
-    'import/no-unresolved': [
-      'warn',
-      {
-        // package.json "style" may be used here which
-        // will resolve for webpack but not within the
-        // eslint plugin
-        ignore: ['\\.css$'],
-      },
-    ],
   },
   settings: {
     'import/resolver': {
-      webpack: {
-        config: './webpack.config.js',
+      vite: {
+        viteConfig: foo.default,
       },
       node: {
         moduleDirectory: ['node_modules', 'src'],

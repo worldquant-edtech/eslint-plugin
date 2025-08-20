@@ -3,6 +3,7 @@ import { default as react } from './react.js';
 import { default as jest } from './jest.js';
 import { default as mdx } from './mdx.js';
 import { default as nodeImports } from './node-imports.js';
+import { default as viteImports } from './vite-imports.js';
 import { default as webpackImports } from './webpack-imports.js';
 import { default as typescriptImports } from './typescript-imports.js';
 
@@ -12,6 +13,7 @@ export {
   react,
   recommended,
   nodeImports,
+  viteImports,
   webpackImports,
   typescriptImports,
 };

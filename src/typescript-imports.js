@@ -1,41 +1,16 @@
 import * as plugin from 'eslint-plugin-import';
+import importRules from './importRules.js';
 
 const { parserOptions, ...rest } = plugin.configs.recommended;
 
 export default {
   ...rest,
-  files: ['**/*.{ts,tsx}'],
+  files: ['**/*.{ts,tsx,js,jsx}'],
   plugins: {
     import: plugin,
   },
   rules: {
     'prefer-const': 'off',
-    'import/no-unresolved': 'warn',
-    'import/no-named-as-default-member': 'off',
-    'import/order': [
-      'warn',
-      {
-        'newlines-between': 'always-and-inside-groups',
-        pathGroups: [
-          {
-            pattern: 'utils',
-            group: 'internal',
-          },
-          {
-            pattern: 'utils/**',
-            group: 'internal',
-          },
-        ],
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          ['parent', 'sibling'],
-          'index',
-          'object',
-          'type',
-        ],
-      },
-    ],
+    ...importRules,
   },
 };
