@@ -2,11 +2,8 @@ import path from 'path';
 import * as plugin from 'eslint-plugin-import';
 import importRules from './importRules.js';
 
-// const bar = path.join(process.cwd(), './vite.config.js');
-// console.info('huh', bar);
-const foo = await import(
-  '/Users/andrew/Bedrock/core/services/web/vite.config.js'
-);
+const file = path.join(process.cwd(), 'vite.config.js');
+const { default: viteConfig } = await import(file);
 
 export default {
   ...plugin.flatConfigs.recommended,
@@ -23,7 +20,7 @@ export default {
   settings: {
     'import/resolver': {
       vite: {
-        viteConfig: foo.default,
+        viteConfig,
       },
       node: {
         moduleDirectory: ['node_modules', 'src'],
