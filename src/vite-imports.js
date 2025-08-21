@@ -2,8 +2,16 @@ import path from 'path';
 import * as plugin from 'eslint-plugin-import';
 import importRules from './importRules.js';
 
-const file = path.join(process.cwd(), 'vite.config.js');
-const { default: viteConfig } = await import(file);
+let viteConfig;
+
+try {
+  const file = path.join(process.cwd(), 'vite.config.js');
+  const { default: config } = await import(file);
+  viteConfig = config;
+} catch {
+  // Config file does not exist or
+  // top-level await not supported.
+}
 
 export default {
   ...plugin.flatConfigs.recommended,
