@@ -1,7 +1,7 @@
 {
-  "name": "@bedrockio/eslint-plugin",
-  "version": "1.2.2",
-  "description": "Common ESLint plugin for Bedrock projects.",
+  "name": "@wqlearning/eslint-plugin",
+  "version": "1.2.3",
+  "description": "Common ESLint plugin for WQ Learning projects.",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -38,10 +38,10 @@
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.7",
     "@babel/preset-env": "^7.26.7",
-    "@bedrockio/prettier-config": "^1.1.1",
+    "@wqlearning/prettier-config": "^1.1.2",
     "eslint": "^9.33.0"
   },
-  "prettier": "@bedrockio/prettier-config",
+  "prettier": "@wqlearning/prettier-config",
   "volta": {
     "node": "20.12.2",
     "yarn": "1.22.22"
