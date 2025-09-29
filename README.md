@@ -1,6 +1,6 @@
-# @bedrockio/eslint-plugin
+# @wqlearning/eslint-plugin
 
-Common ESLint plugin for Bedrock projects. Note that this package uses flat config new to ESLint v9.
+Common ESLint plugin for WQ Learning projects. Note that this package uses flat config new to ESLint v9.
 
 - [Install](#install)
 - [Usage](#usage)
@@ -11,7 +11,7 @@ Common ESLint plugin for Bedrock projects. Note that this package uses flat conf
 Install both [ESLint](http://eslint.org) and this plugin:
 
 ```
-$ npm install eslint @bedrockio/eslint-plugin --save-dev
+$ npm install eslint @wqlearning/eslint-plugin --save-dev
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ $ npm install eslint @bedrockio/eslint-plugin --save-dev
 You can now use the exported modules in a flat ESLint config:
 
 ```js
-import { recommended, react, jest } from '@bedrockio/eslint-plugin';
+import { recommended, react, jest } from '@wqlearning/eslint-plugin';
 
 export default [
   jest,
