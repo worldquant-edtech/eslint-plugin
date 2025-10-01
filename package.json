@@ -43,7 +43,7 @@
   },
   "prettier": "@wqlearning/prettier-config",
   "volta": {
-    "node": "20.12.2",
+    "node": "20.11.1",
     "yarn": "1.22.22"
   }
 }
